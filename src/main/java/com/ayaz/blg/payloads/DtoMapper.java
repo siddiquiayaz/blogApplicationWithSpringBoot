@@ -36,13 +36,7 @@ public class DtoMapper {
 		return userDto.stream().map(m -> dtoToEntity(m)).toList();
 	}
 	
-	//for update
-	public  User dtoToEntity(UserDto userDto ,Long id) {
-		if (Objects.isNull(userDto))
-			return null;
-		 return new User(id , userDto.getName(),userDto.getEmail(),
-				 userDto.getPassword(),userDto.getAbout());
-	}
-
+	
+	
 
 }
